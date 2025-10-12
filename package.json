@@ -1,0 +1,23 @@
+{
+  "name": "electronjs-team5",
+  "version": "1.0.0",
+  "description": "A group activity of Team 5 Thursday group ---- ITE 18 BJ1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schvmq/ElectronJS-Team5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schvmq/ElectronJS-Team5/issues"
+  },
+  "homepage": "https://github.com/schvmq/ElectronJS-Team5#readme",
+  "devDependencies": {
+    "electron": "^38.2.2"
+  }
+}
