@@ -3,30 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Team 5</title>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Sari-Sari Store Inventory</h1>
-            <nav aria-label="primary">
-                <ul class="nav">
-                    <li><a href="#products">Products</a></li>
-                    <li><button id="add-item" class="addItem" aria-label="Add Inventory">Add Item</button></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <main>
-        <section id="products" class="products">
+
+        <header class="header">
+                <div class="container">
+                    <h1 class="logo">Sari-Sari Store Inventory</h1>
+                    <nav aria-label="primary">
+                        <ul class="nav">
+                            <li><a href="#products">Products</a></li>
+                            <li><button id="add-item" class="addItem" aria-label="Add Inventory">Add Item</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+        <section class="hero">
             <div class="container">
-                <h2>Inventory</h2>
-                <div id="product-list" class="product-list">
-                    <!-- Product items will be dynamically inserted here -->
+                <h2>Welcome back, Team 5!</h2>
+                <p>Here's the inventory summary for today.</p>
+            </div>
+        </section>
+
+        <section class="card-section inventory-summary">
+            <div class="container">
+
+                <div class="widget-card total-product-count">
+                    <div class="card-content">
+                        <h3>Total Product</h3>
+                        <p id="total-product-count">0</p>
+                    </div>
+                </div>
+                <div class="widget-card low-stock-count">
+                    <div class="card-content">
+                        <h3>Low Stock Items</h3>
+                        <p id="low-stock-count">0</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="widget-card out-of-stock-count">
+                        <div class="card-content">
+                            <h3>Out of Stock</h3>
+                            <p id="out-of-stock-count">0</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="inventory">
+            <div class="container">
+          
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search product..." aria-label="Search products">
+                </div>
+
+                <div class="table-container">
+                    <div class="table-filters">
+                        <div class="filter-header">
+                            <button class="filter-button active" data-filter="all">Total Product</button>
+                            <button class="filter-button" data-filter="low-stock">Low Stock</button>
+                            <button class="filter-button" data-filter="out-of-stock">Out of Stock</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table aria-label="Products Table">
+                        <thead>
+                          <tr>
+                            <th>No.</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody id="products-tbody">
+                          <tr>
+                            <td>1</td>
+                            <td>Coca-Cola 1L</td>
+                            <td>12</td>
+                            <td>₱45</td>
+                            <td>Beverages</td>
+                            <td>
+                              <button class="edit-btn">Edit</button>
+                              <button class="delete-btn">Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Lucky Me Pancit Canton</td>
+                            <td>8</td>
+                            <td>₱15</td>
+                            <td>Instant Food</td>
+                            <td>
+                              <button class="edit-btn">Edit</button>
+                              <button class="delete-btn">Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Surf Powder 500g</td>
+                            <td>10</td>
+                            <td>₱35</td>
+                            <td>Household</td>
+                            <td>
+                              <button class="edit-btn">Edit</button>
+                              <button class="delete-btn">Delete</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Shampoo 1L</td>
+                            <td>2</td>
+                            <td>₱100</td>
+                            <td>Personal Care</td>
+                            <td>
+                              <button class="edit-btn">Edit</button>
+                              <button class="delete-btn">Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>                      
                 </div>
             </div>
         </section>
 
+            <footer>
+                <div class="container footer-container">
+                    <p>&copy; <span id="year">2025</span> Team 5. All rights reserved.</p>    
+                </div>
+            </footer>
+    </main>
 </body>
 </html>
