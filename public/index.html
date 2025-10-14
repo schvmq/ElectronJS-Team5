@@ -13,7 +13,7 @@
 
         <header class="header">
                 <div class="container">
-                    <h1 class="logo">Sari-Sari Store Inventory</h1>
+                    <h2 class="logo">Sari-Sari Store Inventory</h2>
                     <nav aria-label="primary">
                         <ul class="nav">
                             <li><a href="#products">Products</a></li>
@@ -24,7 +24,7 @@
             </header>
 
         <section class="hero">
-            <div class="container">
+            <div class="container hero-container">
                 <h2>Welcome back, Team 5!</h2>
                 <p>Here's the inventory summary for today.</p>
             </div>
@@ -32,116 +32,120 @@
 
         <section class="card-section inventory-summary">
             <div class="container">
-
-                <div class="widget-card total-product-count">
-                    <div class="card-content">
-                        <h3>Total Product</h3>
-                        <p id="total-product-count">0</p>
-                    </div>
-                </div>
-                <div class="widget-card low-stock-count">
-                    <div class="card-content">
-                        <h3>Low Stock Items</h3>
-                        <p id="low-stock-count">0</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="widget-card out-of-stock-count">
+                <div class="cards">
+                    <div class="widget-card total-product-count">
                         <div class="card-content">
-                            <h3>Out of Stock</h3>
-                            <p id="out-of-stock-count">0</p>
+                            <h3>Total Product</h3>
+                            <p id="total-product-count">0</p>
+                        </div>
+                    </div>
+                    <div class="widget-card low-stock-count">
+                        <div class="card-content">
+                            <h3>Low Stock Items</h3>
+                            <p id="low-stock-count">0</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="widget-card out-of-stock-count">
+                            <div class="card-content">
+                                <h3>Out of Stock</h3>
+                                <p id="out-of-stock-count">0</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <section class="inventory">
+        <section class="inventory-table">
             <div class="container">
           
-                <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Search product..." aria-label="Search products">
-                </div>
-
-                <div class="table-container">
-                    <div class="table-filters">
-                        <div class="filter-header">
-                            <button class="filter-button active" data-filter="all">Total Product</button>
-                            <button class="filter-button" data-filter="low-stock">Low Stock</button>
-                            <button class="filter-button" data-filter="out-of-stock">Out of Stock</button>
+                <div class="table-section">
+                    <div class="table-toolbar">
+                        <div class="form">
+                            <button>
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <input class="input" type="text" id="search-input" placeholder="Search product..." aria-label="Search products">
                         </div>
+
+                        <div class="table-filters">
+                            <button class="filter-button" data-filter="low">Low Stock</button>
+                            <button class="filter-button" data-filter="out-of-stock">Out of Stock</button>
+                            <button class="filter-button active" data-filter="all">Total Product</button>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table aria-label="Inventory Table">
+                            <thead class="table-header">
+                              <tr>
+                                <th>No.</th>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody id="products-tbody">
+                              <tr>
+                                <td>1</td>
+                                <td>Coca-Cola 1L</td>
+                                <td>12</td>
+                                <td>₱45</td>
+                                <td>Beverages</td>
+                                <td>
+                                  <button class="edit-btn">Edit</button>
+                                  <button class="delete-btn">Delete</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Lucky Me Pancit Canton</td>
+                                <td>8</td>
+                                <td>₱15</td>
+                                <td>Instant Food</td>
+                                <td>
+                                  <button class="edit-btn">Edit</button>
+                                  <button class="delete-btn">Delete</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>Surf Powder 500g</td>
+                                <td>10</td>
+                                <td>₱35</td>
+                                <td>Household</td>
+                                <td>
+                                  <button class="edit-btn">Edit</button>
+                                  <button class="delete-btn">Delete</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Shampoo 1L</td>
+                                <td>2</td>
+                                <td>₱100</td>
+                                <td>Personal Care</td>
+                                <td>
+                                  <button class="edit-btn">Edit</button>
+                                  <button class="delete-btn">Delete</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>                      
                     </div>
                 </div>
                 
-                <div class="table-container">
-                    <table aria-label="Products Table">
-                        <thead>
-                          <tr>
-                            <th>No.</th>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody id="products-tbody">
-                          <tr>
-                            <td>1</td>
-                            <td>Coca-Cola 1L</td>
-                            <td>12</td>
-                            <td>₱45</td>
-                            <td>Beverages</td>
-                            <td>
-                              <button class="edit-btn">Edit</button>
-                              <button class="delete-btn">Delete</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Lucky Me Pancit Canton</td>
-                            <td>8</td>
-                            <td>₱15</td>
-                            <td>Instant Food</td>
-                            <td>
-                              <button class="edit-btn">Edit</button>
-                              <button class="delete-btn">Delete</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Surf Powder 500g</td>
-                            <td>10</td>
-                            <td>₱35</td>
-                            <td>Household</td>
-                            <td>
-                              <button class="edit-btn">Edit</button>
-                              <button class="delete-btn">Delete</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Shampoo 1L</td>
-                            <td>2</td>
-                            <td>₱100</td>
-                            <td>Personal Care</td>
-                            <td>
-                              <button class="edit-btn">Edit</button>
-                              <button class="delete-btn">Delete</button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>                      
-                </div>
             </div>
         </section>
-
-            <footer>
-                <div class="container footer-container">
-                    <p>&copy; <span id="year">2025</span> Team 5. All rights reserved.</p>    
-                </div>
-            </footer>
     </main>
+
+    <footer>
+        <p>&copy; <span id="year">2025</span> Team 5. All rights reserved.</p>    
+    </footer>
 </body>
 </html>
