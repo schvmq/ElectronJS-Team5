@@ -77,6 +77,47 @@ h2, h3{
   padding: 0;
 }
 
+/* Buttons */
+
+.btn  {
+  display: inline-block;
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+.edit-btn, .delete-btn {
+  background-color: #f3a5d300;
+  color: var(--text);
+  font-size: small;
+}
+
+.edit-inventory-btn {
+  background-color: #82afed45;
+  color: var(--text-dark);
+}
+
+.nav .add-product-btn {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+.nav .add-product-btn:hover {
+  color: var(--accent);
+}
+
 /* Site Header */
 
 header {
@@ -142,7 +183,6 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-lg);
   margin: var(--spacing-lg);
-  
 }
 
 .widget-card {
@@ -153,12 +193,17 @@ header {
   text-align: center;
   width: 100%;
   height: 100%;
+  background-color: var(--primary);
 }
 
 .card-content {
-    margin: var(--spacing-sm) 0;
+    margin: var(--spacing-sm) 0;;
 }
 
+.widget-card:hover {
+  box-shadow: 0 4px 8px var(--shadow);
+  transform: translateY(-5px);
+}
 
 /* Search bar */
 
@@ -256,7 +301,7 @@ input:not(:placeholder-shown) ~ .reset {
   padding:  15px 30px;
   margin: 0;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: none;
   border-bottom: none; 
   background-color: var(--secondary);
   border-radius: 10px 10px 0 0; 
@@ -264,11 +309,19 @@ input:not(:placeholder-shown) ~ .reset {
   transition: background-color 0.2s;
 }
 
+.filter-button:hover {
+  background-color: var(--accent);
+}
+
+.filter-button.total {
+  box-shadow: #0c0c0c13 2px 2px 2px;
+}
+
 .filter-button.active {
   background-color: var(--primary); 
   border-color: var(--highlight);
-  border-bottom: 1px solid #fff; 
   font-weight: bold;
+  border: none;
 }
   
 /* Aligning the table-toolbar and filters */
@@ -281,6 +334,14 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 /* Inventory Table Styles */
+
+.table-wrapper {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden; 
+  box-shadow: #0c0c0c13 2px 2px 2px;
+  margin-bottom: var(--spacing-lg);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -289,11 +350,6 @@ table {
   overflow: hidden;  
   border-spacing: 0;
   top: 2px;
-}
-
-.table-wrapper {
-  border-radius: 0 0 10px 10px;
-  overflow: hidden; 
 }
 
 th, td {
@@ -332,6 +388,77 @@ tr:nth-child(even) {
 }
 
 
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+.modal-content {
+  background-color: var(--background);
+  margin: 10% auto; 
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-md);
+  width: 90%; 
+  max-width: 500px; 
+  box-shadow: 0 4px 8px var(--shadow);
+}
+.close {
+  color: var(--text-muted);
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+span.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.close:hover {
+  color: var(--text);
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+.modal label {
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+}
+.modal input, .modal select {
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-sm);
+}
+.modal button {
+  align-self: flex-end;
+  background-color: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+.modal button:hover {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+
+
+
 /* Footer */
 
 footer {
@@ -345,4 +472,9 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
