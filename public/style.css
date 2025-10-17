@@ -345,7 +345,6 @@ input:not(:placeholder-shown) ~ .reset {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: var(--spacing-lg);
   border-radius: 10px 0 10px 10px;
   overflow: hidden;  
   border-spacing: 0;
