@@ -18,6 +18,7 @@ function addProduct(name, quantity, price, category) {
     inventory.push(newProduct);
     saveData();
     displayProducts();
+    updateCounts();
 }
 
 function displayProducts() {
@@ -56,6 +57,7 @@ function deleteProduct(id) {
     inventory = inventory.filter(product => product.id !== id);
     saveData();
     displayProducts();
+    updateCounts();
 }
 
 function saveData() {
@@ -141,6 +143,9 @@ function searchProducts(query) {
     `;
     tbody.appendChild(row);
   });
+  
+  // Update counts based on filtered results for search
+  updateCounts();
 }
 
 // Edit product function
