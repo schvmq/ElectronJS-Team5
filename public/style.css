@@ -97,10 +97,47 @@ h2, h3{
   color: var(--text-light);
 }
 
+/* Minimalist action buttons */
 .edit-btn, .delete-btn {
-  background-color: #f3a5d300;
+  padding: 4px 8px;
+  margin: 1px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: transparent;
   color: var(--text);
-  font-size: small;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.edit-btn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.edit-btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.delete-btn {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Action buttons container */
+td:last-child {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
 }
 
 .edit-inventory-btn {
