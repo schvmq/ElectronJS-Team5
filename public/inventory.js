@@ -3,17 +3,8 @@
 let inventory = [];
 
 // Load any saved data (optional)
-window.onload = function() {
-  const savedData = localStorage.getItem('inventory');
-  if (savedData) {
-    inventory = JSON.parse(savedData);
-    displayProducts();
-  }
-};
 
-// *** REMOVE the duplicate document.getElementById('add-item-form').addEventListener('submit', ...) BLOCK ***
-
-// Keep the functions below, but make sure they are globally accessible if called from modal.js
+// Functions are globally accessible for use by addProductForm.js
 
 function addProduct(name, quantity, price, category) {
     const newProduct = {
@@ -83,7 +74,7 @@ function updateCounts() {
     document.getElementById('out-of-stock-count').textContent = outOfStock;
 }
 
-// Also call displayProducts and updateCounts once on load
+// Load data and set up event listeners on page load
 window.onload = function() {
   const savedData = localStorage.getItem('inventory');
   if (savedData) {
