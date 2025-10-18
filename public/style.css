@@ -83,8 +83,8 @@ h2, h3{
   display: inline-block;
   color: var(--text-dark);
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius-sm);
   border: none;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -98,14 +98,9 @@ h2, h3{
 }
 
 .edit-btn, .delete-btn {
-  background-color: #f3a5d300;
+  background-color: rgb(228, 227, 227);
   color: var(--text);
   font-size: small;
-}
-
-.edit-inventory-btn {
-  background-color: #82afed45;
-  color: var(--text-dark);
 }
 
 .nav .add-product-btn {
@@ -113,11 +108,6 @@ h2, h3{
   color: var(--text-dark);
   font-weight: bold;
 }
-
-.nav .add-product-btn:hover {
-  color: var(--accent);
-}
-
 /* Site Header */
 
 header {
@@ -193,17 +183,12 @@ header {
   text-align: center;
   width: 100%;
   height: 100%;
-  background-color: var(--primary);
 }
 
 .card-content {
-    margin: var(--spacing-sm) 0;;
+    margin: var(--spacing-sm) 0;
 }
 
-.widget-card:hover {
-  box-shadow: 0 4px 8px var(--shadow);
-  transform: translateY(-5px);
-}
 
 /* Search bar */
 
@@ -313,10 +298,6 @@ input:not(:placeholder-shown) ~ .reset {
   background-color: var(--accent);
 }
 
-.filter-button.total {
-  box-shadow: #0c0c0c13 2px 2px 2px;
-}
-
 .filter-button.active {
   background-color: var(--primary); 
   border-color: var(--highlight);
@@ -334,21 +315,20 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 /* Inventory Table Styles */
-
-.table-wrapper {
-  border-radius: 0 0 10px 10px;
-  overflow: hidden; 
-  box-shadow: #0c0c0c13 2px 2px 2px;
-  margin-bottom: var(--spacing-lg);
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
   border-radius: 10px 0 10px 10px;
   overflow: hidden;  
   border-spacing: 0;
   top: 2px;
+}
+
+.table-wrapper {
+  border-radius: 0 0 10px 10px;
+  overflow: hidden; 
+  margin-bottom: 10px;
 }
 
 th, td {
@@ -376,7 +356,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #82afed18;
+  background-color: #b5cff331;
 }
 
 .table-container {
@@ -417,12 +397,6 @@ tr:nth-child(even) {
   float: right;
   font-size: 1.5rem;
   font-weight: bold;
-  cursor: pointer;
-}
-span.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
   cursor: pointer;
 }
 .close:hover {
