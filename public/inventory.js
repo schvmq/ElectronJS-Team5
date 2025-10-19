@@ -49,7 +49,7 @@ function displayProducts() {
       tbody.appendChild(row);
     });
 
-    // 💡 Add logic to update the counts here (Total, Low Stock, Out of Stock)
+    // Add logic to update the counts here (Total, Low Stock, Out of Stock)
     updateCounts(); // assuming you create this function
 }
 
@@ -64,7 +64,7 @@ function saveData() {
     localStorage.setItem('inventory', JSON.stringify(inventory));
 }
 
-// 💡 NEW: Function to update summary counts
+// NEW: Function to update summary counts
 function updateCounts() {
     const lowStockThreshold = 10; // Define your threshold
     const total = inventory.length;

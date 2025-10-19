@@ -148,7 +148,7 @@ td:last-child {
 
 .nav .add-product-btn {
   background-color: var(--background-dark);
-  color: var(--text);
+  color: var(--text-light);
   font-weight: bold;
 }
 /* Site Header */
@@ -365,23 +365,13 @@ input:not(:placeholder-shown) ~ .reset {
   cursor: pointer;
   border: none;
   border-bottom: none; 
-  background-color: var(--secondary);
+  background-color: var(--primary);
   border-radius: 10px 10px 0 0; 
   font-size: 0.9em;
-  transition: background-color 0.2s;
-}
-
-.filter-button:hover {
-  background-color: var(--accent);
-}
-
-.filter-button.active {
-  background-color: var(--primary); 
-  border-color: var(--highlight);
   font-weight: bold;
-  border: none;
 }
-  
+
+
 /* Aligning the table-toolbar and filters */
 .table-toolbar {
   display: flex;
