@@ -347,7 +347,7 @@ input:not(:placeholder-shown) ~ .reset {
 .form svg {
   width: 17px;
   margin-top: 3px;
-}
+} 
 
 /* Table filters */
 
